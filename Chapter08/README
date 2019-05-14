@@ -1,0 +1,13 @@
+Mastering OpenVPN Chapter 8 sample code
+
+The samples in this chapter are all openvpn configuration files, 
+some for the server, some for clients, as well as a few scripts
+
+Section "Creating an OpenVPN app profile"
+  client: basic-udp-inline.ovpn
+  server: basic-udp-server.conf (from chapter 4)
+
+Section "Using the PKCS#12 file"
+  client: basic-udp-inline-pkcs12.ovpn
+  server: basic-udp-server.conf (from chapter 4)
+

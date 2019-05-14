@@ -1,0 +1,58 @@
+Mastering OpenVPN Chapter 4 sample code
+
+The samples in this chapter are all openvpn configuration files, 
+some for the server, some for clients, as well as a few scripts
+
+Section "Initial setup of the client/server mode"
+  client: movpn-04-01-client.conf
+  server: movpn-04-01-server.conf
+
+Section "Basic production-level configuration files"
+  client: basic-udp-client.conf
+  server: basic-udp-server.conf
+
+Section "TCP-based configuration"
+  client: basic-tcp-client.conf
+  server: basic-tcp-server.conf
+
+Section "Configuration files for Windows"
+  client: basic-udp-client.ovpn, basic-tcp-client.ovpn
+
+Section "Routing and server-side routing"
+  client: basic-udp-client.conf
+  server: movpn-04-03-server.conf
+
+Section "Client-specific configuration - CCD files"
+  client: basic-udp-client.conf
+  server: movpn-04-04-server.conf
+
+Section "Client-side routing"
+  client: basic-udp-client.conf
+  server: movpn-04-05-server.conf
+
+Section "The OpenVPN status file"
+  client: basic-udp-client.conf
+  server: movpn-04-07-server.conf
+
+Section "The OpenVPN management interface"
+  client: basic-udp-client.conf
+  server: movpn-04-08-server.conf
+
+Section "Session key renegotiation"
+  client: basic-udp-client.conf
+  server: movpn-04-09-server.conf
+
+Section "Protected IPv6 traffic"
+  client: basic-udp-client.conf
+  server: movpn-04-server-ipv6.conf
+
+Section "Proxy ARP"
+  client: basic-udp-client.conf
+  server: movpn-04-10-server.conf
+  scripts: proxyarp-connect.sh proxyarp-disconnect.sh
+
+Section "Assigning public IP addresses to clients"
+  client: basic-udp-client.conf
+  server: movpn-04-11-server.conf
+  scripts: proxyarp-connect.sh proxyarp-disconnect.sh
+

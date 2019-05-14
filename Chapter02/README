@@ -1,0 +1,30 @@
+Mastering OpenVPN Chapter 2 sample code
+
+The samples in this chapter are all openvpn configuration files, 
+some server configuration files and some client configuration files.
+
+Section "Configuration files versus the command line"
+  server: movpn-02-01-server.conf
+
+Section "The complete setup"
+  client: movpn-02-02-client.conf
+  server: movpn-02-02-server.conf
+
+Section "Advanced IP-less setup"
+  client: movpn-02-03-client.conf
+  server: movpn-02-03-server.conf
+  scripts: movpn-02-03-client-up.sh, movpn-02-03-server-up.sh
+
+Section "Three-way routing"
+  clientA: AtoB.conf, AtoC.conf
+  clientC: CtoB.conf
+
+  serverB: BtoA.conf, BtoC.conf
+  serverC: CtoA.conf
+
+Section "Bridged tap adapter on both ends"
+  client & server: movpn-02-05.conf
+
+Section "Combining point-to-point mode with certificates"
+  client: movpn-02-06-client.conf
+  server: movpn-02-06-server.conf

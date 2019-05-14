@@ -1,0 +1,30 @@
+Mastering OpenVPN Chapter 5 sample code
+
+The samples in this chapter are all openvpn configuration files, 
+some for the server, some for clients, as well as a few scripts.
+
+Section "Enabling file sharing over VPN"
+  client: basic-udp-client.ovpn (from chapter 4)
+  server: movpn-05-01-server.conf
+
+Section "Using LDAP as a backend authentication mechanism"
+  client: movpn-05-02-client.ovpn
+  server: movpn-05-02-server.conf
+  config: movpn_ldap.conf
+
+Section "Changing the TAP-Win adapter location using the redirect-gateway"
+  client: basic-udp-client.ovpn (from chapter 4)
+  server: movpn-05-03-server.conf
+
+Section "Redirecting all traffic in combination with extra gateways"
+  client: basic-udp-client.ovpn (from chapter 4)
+  server: movpn-05-04-server.conf
+
+Section "HTTP proxies"
+  client: movpn-05-05-client.conf
+  server: basic-tcp-server.conf (from chapter 4)
+
+Section "SOCKS proxies"
+  client: movpn-05-06-client.conf
+  server: basic-tcp-server.conf (from chapter 4)
+

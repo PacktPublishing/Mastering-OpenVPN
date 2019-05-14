@@ -1,0 +1,10 @@
+Mastering OpenVPN Chapter 9 sample code
+
+The samples in this chapter are all openvpn configuration files, 
+some for the server, some for clients, as well as a few scripts
+
+Section "Basic production-level configuration files"
+  client: basic-udp-client.conf
+  server: movpn-09-01-server.conf
+
+

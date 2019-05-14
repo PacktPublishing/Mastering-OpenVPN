@@ -1,0 +1,39 @@
+Mastering OpenVPN Chapter 7 sample code
+
+The samples in this chapter are all openvpn configuration files, 
+some for the server, some for clients, as well as a few scripts.
+
+Section "Client authentication"
+  client: basic-udp-client.conf
+  server: movpn-07-client-connect.conf
+  scripts: movpn-07-client-auth.sh
+
+Section "Example 1 - client-selected route"
+  client: basic-udp-client.conf
+  server: movpn-07-example1-server.conf
+  scripts: movpn-07-example1-aupv.sh, movpn-07-example1-cc.sh
+
+Section "Example 2 - track client connection statistics"
+  client: basic-udp-client.conf
+  server: movpn-07-example2-server.conf
+  script: movpn-07-example2.sh
+
+Section "Example 3 - disconnect user after X minutes"
+  client: basic-udp-client.conf
+  server: movpn-07-example3-server.conf
+  script: timeout.sh
+
+Section "Example 4 - mount NFS share"
+  client: movpn-07-example4-client.conf
+  server: basic-udp-server.conf
+  scripts: movpn-07-example4-down.sh, movpn-07-example4-up.sh
+
+Section "Example 4 - using all scripts at once"
+  client: movpn-07-01-client.conf
+  server: movpn-07-01-server.conf
+  scripts: movpn-07-01-script.sh
+
+Section "The auth-pam plugin"
+  client: movpn-07-02-client.conf
+  server: movpn-07-02-server.conf
+

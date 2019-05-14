@@ -1,0 +1,19 @@
+#!/bin/bash
+
+br="br0"
+tap="tap0"
+eth="eth0"
+br_ip="192.168.122.1"
+br_netmask="255.255.255.0"
+br_broadcast="192.168.122.255"
+# Create the tap adapter
+openvpn --mktun --dev $tap
+# Create the bridge and add interfaces
+brctl addbr $br
+brctl addif $br $eth
+brctl addif $br $tap
+# Configure the bridge
+ifconfig $tap 0.0.0.0 promisc up
+ifconfig $eth 0.0.0.0 promisc up
+ifconfig $br $br_ip netmask $br_netmask broadcast $br_broadcast
+

@@ -1,0 +1,30 @@
+Mastering OpenVPN Chapter 6 sample code
+
+The samples in this chapter are all openvpn configuration files, 
+some for the server, some for clients, as well as a few scripts.
+
+Section "The basic setup"
+  client: tap-udp-client.conf, tap-udp-client.ovpn
+  server: tap-udp-server.conf
+
+Section "Enabling client-to-client traffic"
+  client: tap-udp-client.ovpn
+  server: movpn-06-01-server.conf
+
+Section "Filtering traffic using the pf filter of OpenVPN"
+  client: movpn-06-02-client.conf
+  server: movpn-06-02-server.conf
+
+Section "Bridging on Linux"
+  client: tap-udp-client.conf
+  server: movpn-06-03-server.conf
+  script: movpn-bridge-start
+
+Section "Bridging on Windows"
+  client: tap-udp-client.ovpn
+  server: movpn-06-04-server.ovpn
+
+Section "Using an external DHCP server"
+  client: tap-udp-client.ovpn
+  server: movpn-06-05-server.conf
+
