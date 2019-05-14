@@ -35,7 +35,7 @@ server 10.200.0.0 255.255.255.0
 
 
 ## Get to Know the Author
-**Eric F Crist **
+**Eric F Crist**
 is an IT professional with experience in hardware and software
 systems integration. With a few others, he has had a key role in building the
 OpenVPN community to what it is today. He works in research and development
